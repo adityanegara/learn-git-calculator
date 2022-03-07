@@ -12,14 +12,18 @@ addButton.addEventListener('click', () =>{
     if(validation(inputOneValue, inputTwoValue)){
         results.innerHTML = inputOneValue + inputTwoValue; 
     }else{
-        alert("Input tidak sesuai format!");
+        alert('Input Tidak Sesuai Format!')
     }
 });
 
 
-function validation (inputOne, inputTwo){
+
+
+const validation = (inputOne, inputTwo) =>{
+
     if((inputOne == false) || (inputTwo == false) || (isNaN(inputOne)) || (isNaN(inputTwo))){
         return false;
     }
     return true;
 }
+
