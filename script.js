@@ -9,6 +9,17 @@ addButton.addEventListener('click', () =>{
     console.log('Click');
     const inputOneValue = parseInt(inputOne.value);
     const inputTwoValue = parseInt(inputTwo.value);
-    results.innerHTML = inputOneValue + inputTwoValue; 
+    if(validation(inputOneValue, inputTwoValue)){
+        results.innerHTML = inputOneValue + inputTwoValue; 
+    }else{
+        alert("Input tidak sesuai format!");
+    }
 });
 
+
+function validation (inputOne, inputTwo){
+    if((inputOne == false) || (inputTwo == false) || (isNaN(inputOne)) || (isNaN(inputTwo))){
+        return false;
+    }
+    return true;
+}
