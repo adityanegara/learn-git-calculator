@@ -17,9 +17,13 @@ addButton.addEventListener('click', () =>{
 });
 
 
+
+
 const validation = (inputOne, inputTwo) =>{
+
     if((inputOne == false) || (inputTwo == false) || (isNaN(inputOne)) || (isNaN(inputTwo))){
         return false;
     }
     return true;
 }
+
